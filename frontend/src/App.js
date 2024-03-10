@@ -18,10 +18,10 @@ function App() {
       <div className="App">
         <Header /> {/* Header appears on all pages */}
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Default route */}
-          <Route path="/how-to-use" element={<HowToUse />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/generate" element={<Generate />} />
+          <Route path="/Home" element={<Home />} /> {/* Default route */}
+          <Route path="/HowToUse" element={<HowToUse />} />
+          <Route path="/Donate" element={<Donate />} />
+          <Route path="/Generate" element={<Generate />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer /> {/* Footer appears on all pages */}

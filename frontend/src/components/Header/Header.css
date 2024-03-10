@@ -1,0 +1,37 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 30px 100px; /* Increase padding from left and right */
+    height: 80px; /* Make the header thicker */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 40px; /* Increase right margin */
+    font-size: 50px; /* Make the font bigger */
+  }
+  
+  a.home {
+    font-weight: bold; /* Make the "Home" font bold */
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px; /* Increase left margin */
+    font-size: 25px; /* Make the font bigger */
+    padding: 10px 20px; /* Add padding to the button */
+    border: 1px solid #333; /* Add a border to the button */
+    border-radius: 50px; /* Add rounded corners to the button */
+  }

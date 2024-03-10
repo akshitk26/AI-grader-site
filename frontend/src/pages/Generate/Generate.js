@@ -3,7 +3,7 @@ import React from 'react';
 function Generate() {
     return (
         <div>
-            <h1>Generate</h1>
+            <h1>generate rizzler</h1>
         </div>
     )
 }
