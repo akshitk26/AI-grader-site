@@ -18,8 +18,6 @@ function App() {
           <Route path="/HowToUse" element={<HowToUse />} />
           <Route path="/Donate" element={<Donate />} />
           <Route path="/Generate" element={<Generate />} />
-          <Route path="/Grade" element={<Grade />} />
-          <Route path="/SignIn" element={<SignIn />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer /> {/* Footer appears on all pages */}
