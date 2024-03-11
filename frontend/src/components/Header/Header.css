@@ -4,7 +4,7 @@ header {
     align-items: center;
     background-color: #f2f2f2;
     padding: 30px 100px; /* Increase padding from left and right */
-    height: 40px; /* Make the header thicker */
+    height: 30px; /* Make the header thicker */
   }
  
   a {
@@ -29,52 +29,20 @@ header {
   .nav-links a {
     text-decoration: none;
     color: #333;
-    margin-left: 20px; /* Increase left margin */
-    font-size: 15px; /* Make the font bigger */
+    margin-left: 20px;
+    font-size: 17px;
+    transition: all 0.3s ease; /* Add a smooth transition effect for scaling and color change */
+  }
+  
+  /* Change the color and scale up slightly when hovering over the tabs */
+  .nav-links a:hover {
+    color: #E24E42; /* Change the color when hovering */
+    transform: scale(1.1); /* Scale up slightly when hovering */
+  }
+
+  .signInButton a{
+    font-size: 17px;
     padding: 10px 20px; /* Add padding to the button */
     border: 1px solid #333; /* Add a border to the button */
     border-radius: 50px; /* Add rounded corners to the button */
-  }
-
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    margin-right: 40px;
-    padding: 10px 0; /* Update padding to remove vertical padding */
-    border: none; /* Remove the border */
-    cursor: pointer; /* Change cursor to pointer */
-  }
- 
-  .dropdown span {
-    border-bottom: 2px solid; /* Add a bottom border to create the underline effect */
-    padding-bottom: 7px; /* Add padding to create space between the text and the underline */
-  }
- 
-  .dropdown .dropbtn {
-    font-size: 15px;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-  }
- 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
- 
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 20px;
-  }
- 
-  .dropdown:hover .dropdown-content {
-    display: block;
   }

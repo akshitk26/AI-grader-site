@@ -4,7 +4,10 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import HowToUse from './pages/HowToUse/HowToUse';
 import Donate from './pages/Donate/Donate';
-import Generate from './pages/Use/Generate/Generate';
+import Generate from './pages/Generate/Generate';
+import Grade from './pages/Grade/Grade';
+import SignIn from './pages/SignIn/SignIn';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
           <Route path="/HowToUse" element={<HowToUse />} />
           <Route path="/Donate" element={<Donate />} />
           <Route path="/Generate" element={<Generate />} />
+          <Route path="/Grade" element={<Grade />} />
+          <Route path="/Signin" element={<SignIn />} />
+          <Route path="/About" element={<About />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer /> {/* Footer appears on all pages */}
