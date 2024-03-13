@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --papaya: #E24E42;
+    --papaya-rgb: 226, 78, 66;
+
+    --mustard: #E9B000;
+    --mustard-rgb: 233, 176, 0;
+
+    --blush: #EB6E80;
+    --blush-rgb: 235, 110, 128;
+
+    --aqua: #008F95;
+    --aqua-rgb: 0, 143, 149;
+
+    --body-font: 'Arial', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+}

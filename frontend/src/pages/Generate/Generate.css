@@ -1,0 +1,125 @@
+@import '../../Theme.css';
+
+.body {
+    background-color: white;
+    padding: 100px 130px; /* Add padding to the top and bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Style the title bar */
+.title {
+    background-color: var(--papaya);
+    text-align: center; /* Center the text horizontally */
+    padding: 120px 0; /* Add padding to the top and bottom */
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .title h1 {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 70px; /* Set the font size */
+    color: white; /* Set the text color */
+    font-weight: 500;
+  }
+
+  .title p {
+    margin: 0; /* Remove default margin for p */
+    margin-top: 20px;
+    font-size: 25px; /* Set the font size */
+    color: white; /* Set the text color */
+    font-weight: 200;
+  }
+
+  /* Style the description label */
+.description {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;;
+  }
+  
+  /* Style the options container */
+  .options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style the option labels and buttons */
+/* Add border to the outer container and remove border from inner elements */
+.options div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
+  border: none; /* Remove the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Add padding for space inside the box */
+  border-radius: 20px;
+  width: 200px; /* Set fixed width for all subject sections */
+}
+
+/* Remove border from inner elements */
+.options div label,
+.options div .buttons {
+  border: none;
+  box-shadow:none;
+}
+  
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 80px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 15px;
+    transition: background-color 0.3s, transform 0.2s; /* Add transition for smooth color change and scaling */
+  }
+  
+  button:hover {
+    background-color: #d9d9d9; /* Change color on hover */
+    transform: scale(1.1); /* Scale up on hover */
+    color: white;
+  }
+  
+  button.active {
+    background-color: #a6a6a6; /* Change color when active */
+    transform: scale(1.1); /* Scale up when active */
+    color: white;
+  }
+
+  .options div label{
+    font-size: 22px;
+  }
+
+  .generateButton {
+    margin-top: 70px;
+  }
+
+  .generateButton button {
+    font-size: 30px;
+    border-radius: 15px;
+    background-color: var(--aqua);
+    border: none;
+    color: white;
+  }
+
+  .text-section {
+    margin-top: 30px; /* Add some space between the generate button and the text section */
+    padding: 10px 30px; /* Add padding for space inside the text section */
+    border: 2px solid #d9d9d9; /* Add border to the text section */
+    border-radius: 10px; /* Add rounded corners */
+    width: auto; /* Set width for the text section */
+    font-size: 20px;
+    text-align: center;
+  }
+
+
+
