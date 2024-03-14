@@ -1,12 +1,22 @@
-import React from 'react';
+// frontend\src\pages\Generate\Generate.js
+// This is the page where users can generate a prompt for AI to grade.
+
+
 import './Generate.css';
 import '../../Theme.css';
 
+
+import React, { useState } from 'react';
+import axios from 'axios';
+
+
 function Generate() {
 
+
+    //button effect when clicked
     document.addEventListener('DOMContentLoaded', function() {
         const buttons = document.querySelectorAll('.buttons button');
-      
+     
         buttons.forEach(button => {
           button.addEventListener('click', function() {
             // Remove 'active' class from all buttons
@@ -17,6 +27,23 @@ function Generate() {
         });
       });
 
+
+      // method to feed prompt into openAI api in backend and print the response in the textSection
+    const [aiOutput, setAiOutput] = useState('');
+    // const getAIOutput = async () => {
+    //     try {
+    //         const response = await axios.post('http://localhost:5000/api/openai', { prompt: 'Pretend you are donald trump. give a short introduction.' });
+    //         if (response && response.data && response.data.output) {
+    //             setAiOutput(response.data.output);
+    //         } else {
+    //             console.error('Invalid response:', response);
+    //         }
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // };
+
+
     return (
         <div>
             <div class="title">
@@ -25,9 +52,11 @@ function Generate() {
             </div>
             <div class="body">
 
+
                 <div class="description">
                     <label for="subject">Pick a subject and FRQ type to get a question you can practice with!</label>
                 </div>
+
 
                 <div class="options">
                     <div class="apWorld">
@@ -52,18 +81,38 @@ function Generate() {
                     </div>
                 </div>
 
+
                 <div class="generateButton">
-                    <button>Get my question!</button>
+                    <button onClick={() => {
+                        const getAIOutput = async () => {
+                            try {
+                                const response = await axios.post('http://localhost:5000/api/openai', { prompt: 'Pretend you are donald trump. give a short introduction.' },
+                                { headers: { 'Content-Type': 'application/json' } });
+                                console.log('request sent!');
+                                console.log(response);
+                                if (response && response.data && response.data.output) {
+                                    setAiOutput(response.data.output);
+                                } else {
+                                    console.error('Invalid response:', response);
+                                }
+                            } catch (error) {
+                                console.error(error);
+                            }
+                        };
+                        getAIOutput();
+                    }}>Get my question!</button>
                 </div>
+
 
                 <div class="textSection">
                     <div class="text-section">
-                        <p>Your prompt will show up here</p>
+                        <p>output: {aiOutput}</p>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
 
 export default Generate;
