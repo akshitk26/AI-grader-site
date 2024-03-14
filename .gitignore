@@ -4,3 +4,6 @@ venv/
 #*if reproducing on another device, create virtual environment and install flask, pytorch
 #python -m venv venv
 #pip install torch flask
+
+#exclude .env file
+.env
