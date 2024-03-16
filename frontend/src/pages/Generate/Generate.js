@@ -62,7 +62,9 @@ function Generate() {
 
 
                 <div class="options">
+
                     <div class="apWorld">
+                        {/*ap world box*/}
                         <label for="apWorld">AP World History</label>
                         <div class="buttons">
                         <   button onClick={() => {
@@ -75,6 +77,8 @@ function Generate() {
                             }}>SAQ</button>
                         </div>
                     </div>
+
+                    {/*ap ush box*/}
                     <div class="apUSH">
                         <label for="apUSH">AP US History</label>
                         <div class="buttons">
@@ -88,6 +92,22 @@ function Generate() {
                             }}>SAQ</button>
                         </div>
                     </div>
+
+                    <div class="apEuro">
+                        <label for="apEuro">AP EU History</label>
+                        <div class="buttons">
+                            <button onClick={() => {
+                                setActiveEssayType('euroLEQ');
+                                setActiveInstructions('euroLEQinst');
+                            }}>LEQ</button>  
+                            <button onClick={() => {
+                                setActiveEssayType('euroSAQ');
+                                setActiveInstructions('euroSAQinst');
+                            }}>SAQ</button>
+                        </div>
+                    </div>
+
+                    {/*ap lang box*/}
                     <div class="apLang">
                         <label for="apLang">AP English Lang</label>
                         <div class="buttons">
@@ -102,7 +122,7 @@ function Generate() {
 
                 <div class="generateButton">
                     <button onClick={() => {getAIOutput();}}>
-                        Get my question!
+                        Generate Prompt
                     </button>
                 </div>
 
