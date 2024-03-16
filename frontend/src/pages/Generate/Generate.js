@@ -4,7 +4,6 @@ import './Generate.css';
 import '../../Theme.css';
 import prompts from '../../assets/prompts';
 
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -27,7 +26,9 @@ function Generate() {
 
     // method to send prompt into openAI api in backend and print the response in the textSection
     const getAIOutput = async () => {
-    const prompt = prompts[activeEssayType];
+        const prompt = typeof prompts[activeEssayType] === 'function' 
+            ? prompts[activeEssayType]() 
+            : prompts[activeEssayType];
 
         try {
             const response = await axios.post('http://localhost:5000/api/openai', { prompt: prompt });
