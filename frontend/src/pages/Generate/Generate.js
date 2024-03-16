@@ -3,6 +3,7 @@
 import './Generate.css';
 import '../../Theme.css';
 import prompts from '../../assets/prompts';
+import instructions from '../../assets/instructions';
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -23,15 +24,19 @@ function Generate() {
 
     const [aiOutput, setAiOutput] = useState('');
     const [activeEssayType, setActiveEssayType] = useState('');
+    const [activeInstructions, setActiveInstructions] = useState('');
 
     // method to send prompt into openAI api in backend and print the response in the textSection
     const getAIOutput = async () => {
         const prompt = typeof prompts[activeEssayType] === 'function' 
             ? prompts[activeEssayType]() 
             : prompts[activeEssayType];
+        const instruction = typeof instructions[activeInstructions] === 'function' 
+            ? instructions[activeInstructions]() 
+            : instructions[activeInstructions];
 
         try {
-            const response = await axios.post('http://localhost:5000/api/openai', { prompt: prompt });
+            const response = await axios.post('http://localhost:5000/api/openai', { prompt: prompt, instructions: instruction });
             if (response && response.data && response.data.output) {
                 setAiOutput(response.data.output);
             } else {
@@ -60,21 +65,36 @@ function Generate() {
                     <div class="apWorld">
                         <label for="apWorld">AP World History</label>
                         <div class="buttons">
-                            <button onClick={() => setActiveEssayType('worldLEQ')}>LEQ</button>  
-                            <button onClick={() => setActiveEssayType('worldSAQ')}>SAQ</button>
+                        <   button onClick={() => {
+                                setActiveEssayType('worldLEQ');
+                                setActiveInstructions('worldLEQinst');
+                            }}>LEQ</button>
+                            <button onClick={() => {
+                                setActiveEssayType('worldSAQ');
+                                setActiveInstructions('worldSAQinst');
+                            }}>SAQ</button>
                         </div>
                     </div>
                     <div class="apUSH">
                         <label for="apUSH">AP US History</label>
                         <div class="buttons">
-                            <button onClick={() => setActiveEssayType('apushLEQ')}>LEQ</button>  
-                            <button onClick={() => setActiveEssayType('apushSAQ')}>SAQ</button>
+                            <button onClick={() => {
+                                setActiveEssayType('apushLEQ');
+                                setActiveInstructions('apushLEQinst');
+                            }}>LEQ</button>  
+                            <button onClick={() => {
+                                setActiveEssayType('apushSAQ');
+                                setActiveInstructions('apushSAQinst');
+                            }}>SAQ</button>
                         </div>
                     </div>
                     <div class="apLang">
                         <label for="apLang">AP English Lang</label>
                         <div class="buttons">
-                            <button onClick={() => setActiveEssayType('argument')}>Argument Essay</button>
+                            <button onClick={() => {
+                                setActiveEssayType('argument');
+                                setActiveInstructions('argumentInst');
+                            }}>Argument Essay</button>
                         </div>
                     </div>
                 </div>
