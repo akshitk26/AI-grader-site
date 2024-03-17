@@ -55,11 +55,10 @@
   flex-direction: column;
   margin: 0 40px;
   border: none; /* Remove the border */
-
-  border-radius: 41px;
-  background: #f5f5f5;
-  box-shadow:  20px 20px 100px #cecece,
-               -20px -20px 100px #ffffff;
+border-radius: 50px;
+background: #ededed;
+box-shadow:  21px 21px 34px #c7c7c7,
+             -21px -21px 34px #ffffff;
                
   padding: 20px; /* Add padding for space inside the box */
   width: 200px; /* Set fixed width for all subject sections */
@@ -112,39 +111,68 @@
     font-size: 30px;
     border-radius: 15px;
     border: none;
-    color: black;
     padding: 15px 30px;
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: var(--papaya);
-    background: transparent;
+    color: white;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+
+    /* background: transparent;
     cursor: pointer;
     transition: ease-out 0.3s;
     border: 2px solid var(--papaya);
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 var(--papaya);
+    box-shadow: inset 0 0 0 0 var(--papaya); */
   }
 
-  .generateButton button:hover {
+  .generateBtn{
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
     color: white;
-    box-shadow: inset 0 -100px 0 0 var(--papaya);
   }
 
-  .generateButton button:active {
-    transform: scale(0.9);
+  .generateBtn{
+    transition: all 0.2s ease-in-out;
+  }
+
+  .generateBtn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  .generateBtn:active {
+    opacity: 0.5;
   }
 
   .text-section {
-    margin-top: 30px; /* Add some space between the generate button and the text section */
+    margin-top: 0px; /* Add some space between the generate button and the text section */
     padding: 10px 30px; /* Add padding for space inside the text section */
     border: 2px solid #d9d9d9; /* Add border to the text section */
     border-radius: 10px; /* Add rounded corners */
     width: auto; /* Set width for the text section */
     font-size: 22px;
     text-align: center;
+    color: rgb(90, 90, 90);
+    margin-bottom: 60px;
   }
+
+.textSection p {
+  color: red;
+}
+
+.text-section p {
+  color: black;
+}
 
 
 

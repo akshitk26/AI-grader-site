@@ -47,6 +47,9 @@ function Generate() {
         }
     };
 
+    //if button is selected or not
+    const [isButtonSelected, setIsButtonSelected] = useState(false);
+
     return (
         <div>
             <div class="title">
@@ -70,10 +73,12 @@ function Generate() {
                         <   button onClick={() => {
                                 setActiveEssayType('worldLEQ');
                                 setActiveInstructions('worldLEQinst');
+                                setIsButtonSelected(true);
                             }}>LEQ</button>
                             <button onClick={() => {
                                 setActiveEssayType('worldSAQ');
                                 setActiveInstructions('worldSAQinst');
+                                setIsButtonSelected(true);
                             }}>SAQ</button>
                         </div>
                     </div>
@@ -85,10 +90,12 @@ function Generate() {
                             <button onClick={() => {
                                 setActiveEssayType('apushLEQ');
                                 setActiveInstructions('apushLEQinst');
+                                setIsButtonSelected(true);
                             }}>LEQ</button>  
                             <button onClick={() => {
                                 setActiveEssayType('apushSAQ');
                                 setActiveInstructions('apushSAQinst');
+                                setIsButtonSelected(true);
                             }}>SAQ</button>
                         </div>
                     </div>
@@ -99,10 +106,12 @@ function Generate() {
                             <button onClick={() => {
                                 setActiveEssayType('euroLEQ');
                                 setActiveInstructions('euroLEQinst');
+                                setIsButtonSelected(true);
                             }}>LEQ</button>  
                             <button onClick={() => {
                                 setActiveEssayType('euroSAQ');
                                 setActiveInstructions('euroSAQinst');
+                                setIsButtonSelected(true);
                             }}>SAQ</button>
                         </div>
                     </div>
@@ -114,6 +123,7 @@ function Generate() {
                             <button onClick={() => {
                                 setActiveEssayType('argument');
                                 setActiveInstructions('argumentInst');
+                                setIsButtonSelected(true);
                             }}>Argument Essay</button>
                         </div>
                     </div>
@@ -121,15 +131,16 @@ function Generate() {
 
 
                 <div class="generateButton">
-                    <button onClick={() => {getAIOutput();}}>
+                    <button class ="generateBtn" onClick={() => {getAIOutput();}}>
                         Generate Prompt
                     </button>
                 </div>
 
 
                 <div class="textSection">
+                    {!isButtonSelected && <p>Please select an FRQ type first.</p>}
                     <div class="text-section">
-                        <p>{aiOutput}</p>
+                        {aiOutput === '' ? <p>Your prompt will appear here</p> : <p>{aiOutput}</p>}
                     </div>
                 </div>
             </div>

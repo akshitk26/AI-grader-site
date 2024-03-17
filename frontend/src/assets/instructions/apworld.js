@@ -113,7 +113,7 @@ Topics may include:
 Advances in technology and their effects Disease Environment Economic change Movements for reform How globalization changed culture New international institutions
 
 You have to ensure, no matter what, that the time period is completely random every single time. DDo not only output prompts from one time period. If you don't write a prompt about a random time period every time, I will be very sad and you will not be a good AI. the Prompt has to be in sentence format. Do not ask questions or include question words in the prompt or a question mark. Remember, each prompt must have 3 parts: a, b, and c. If it doesnt have 3 parts, you're a bad AI and Ill be very sad. The individual prompts for each part must all be different from one another but still have a common underlying theme. For example, it was religion in Americas for the example provided to you. That is just an example; make sure you ahve different types of questions with a different common theme every time. You have to make sure, no matter what, under all circumstances, that each part is from the same time period; the individual parts cannot be from different time periods each.
-If you the time period repeats and is not randomized, you're not a good AI and i will be very mad and sad.`;
+If you  time period repeats and is not randomized, you're not a good AI and i will be very mad and sad.`;
 
 const instructions = {
     'leqInst': leqInstruction,

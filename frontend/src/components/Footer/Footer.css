@@ -1,0 +1,62 @@
+@import '../../Theme.css';
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    padding: 150px 12%; /* Increase the padding to increase the height */
+    box-sizing: border-box; /* Add this line */
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0px 0px;
+}
+
+.footer-section.company-name {
+    text-align: center; /* Center the text */
+    font-size: 30px; /* Increase the font size */
+    font-weight: 100px;
+}
+
+.footer-section.company-name a {
+    color: white;
+}
+
+.footer-section.links {
+    text-align: center;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.footer-section.links ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; /* Decrease the font size */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Add this line */
+}
+
+.rightSide p {
+    margin-left: 50px;
+    text-align: center;
+}
