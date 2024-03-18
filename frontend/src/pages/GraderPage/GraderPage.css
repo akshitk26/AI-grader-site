@@ -1,0 +1,80 @@
+@import '../../Theme.css';
+
+.actGraderBody {
+    padding: 50px 250px;
+}
+
+.inputSection h1 {
+    font-size: 27px;
+}
+
+.inputSection div textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 20px;
+    font-size: 19px;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 10px;
+}
+
+.promptSection textarea {
+    height: 100px;
+}
+
+.responseSection textarea {
+    height: 300px;
+}
+
+.graderOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.graderOptions div .graderButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.graderOptions div p {
+    font-size: 20px;
+}
+
+.submitButton {
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--papaya);
+}
+
+.submitSection{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.scoreSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scoreSection h1{
+    margin-right: 50px;
+}
+
+.points {
+    font-size: 50px;
+}
+
+.feedbackTxt{ /* Add some space between the generate button and the text section */
+    padding: 10px 30px; /* Add padding for space inside the text section */
+    border: 2px solid gray; /* Add border to the text section */
+    border-radius: 10px; /* Add rounded corners */
+    width: auto; /* Set width for the text section */
+    font-size: 19px;
+    text-align: left;
+    color: black;
+    margin-bottom: 60px;
+}

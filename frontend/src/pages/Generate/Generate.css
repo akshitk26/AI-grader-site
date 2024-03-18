@@ -20,7 +20,7 @@
   
   .title h1 {
     margin: 0; /* Remove default margin for h1 */
-    font-size: 70px; /* Set the font size */
+    font-size: 80px; /* Set the font size */
     color: white; /* Set the text color */
     font-weight: 500;
   }

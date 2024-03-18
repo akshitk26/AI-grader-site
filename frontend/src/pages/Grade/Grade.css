@@ -1,0 +1,26 @@
+.graderTitle {
+    background-color: var(--mustard);
+    
+    text-align: center; /* Center the text horizontally */
+    padding: 120px 0; /* Add padding to the top and bottom */
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .graderTitle h1 {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 80px; /* Set the font size */
+    color: white; /* Set the text color */
+    font-weight: 500;
+  }
+
+  .graderTitle p {
+    margin: 0; /* Remove default margin for p */
+    margin-top: 20px;
+    font-size: 25px; /* Set the font size */
+    color: white; /* Set the text color */
+    font-weight: 200;
+  }
+  
+.graderBody {
+    padding: 100px 130px;
+}

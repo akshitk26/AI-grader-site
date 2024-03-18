@@ -8,7 +8,7 @@ function Footer() {
             <div className="footer-content">
 
                 <div className="footer-section company-name">
-                    <Link to="/Home"><h1>PrepAI</h1></Link>
+                    <Link to="/Home"><h1>ExetasAI</h1></Link>
                 </div>
 
                 <div className='rightSide'>

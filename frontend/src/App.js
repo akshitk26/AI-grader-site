@@ -9,6 +9,7 @@ import Generate from './pages/Generate/Generate';
 import Grade from './pages/Grade/Grade';
 import SignIn from './pages/SignIn/SignIn';
 import About from './pages/About/About';
+import GraderPage from './pages/GraderPage/GraderPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Grade" element={<Grade />} />
           <Route path="/Signin" element={<SignIn />} />
           <Route path="/About" element={<About />} />
+          <Route path="/GraderPage" element={<GraderPage />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer /> {/* Footer appears on all pages */}
