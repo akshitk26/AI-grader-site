@@ -1,0 +1,6 @@
+what to install in backend folder:
+
+pip install openai
+pip install flask
+pip install flask_cors
+pip install python-dotenv
