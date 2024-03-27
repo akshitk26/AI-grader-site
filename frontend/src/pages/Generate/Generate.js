@@ -36,7 +36,7 @@ function Generate() {
             : instructions[activeInstructions];
 
         try {
-            const response = await axios.post('http://localhost:5000/api/openai', { prompt: prompt, instructions: instruction });
+            const response = await axios.post('http://localhost:5000/api/generator', { prompt: prompt, instructions: instruction });
             if (response && response.data && response.data.output) {
                 setAiOutput(response.data.output);
             } else {
