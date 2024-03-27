@@ -2,14 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './GraderPage.css';
 import axios from 'axios';
 
-function GraderPage() {
+import rubrics from '../../assets/rubrics';
 
-    const [prompt, setPrompt] = useState('');
-    const [response, setResponse] = useState('');
-    const [feedback, setFeedback] = useState('Your feedback will appear here');
-    const [score, setScore] = useState(0);
+function GraderPage() {
     
-    //click effect
+    //button click effect
     useEffect(() => {
         const buttons = document.querySelectorAll('.graderButtons button');
         buttons.forEach(button => {
@@ -20,7 +17,31 @@ function GraderPage() {
         });
     }, []);
 
-    //API call method
+    //vars for all input fields
+    const [promptText, setPromptText] = useState('');
+    const [responseText, setResponseText] = useState('');
+    const [activeEssayType, setActiveEssayType] = useState('');
+
+    //output field vars
+    const [feedback, setFeedback] = useState('Your feedback will appear here');
+
+    //API call method to get grader output
+    const getGraderOutput = async () => {
+        const rubric = typeof rubrics[activeEssayType] === 'function'
+            ? rubrics[activeEssayType]()
+            : rubrics[activeEssayType];
+
+        try {
+            const response = await axios.post('http://localhost:5000/api/grader', { prompt: promptText, response: responseText, rubric: rubric });
+            if (response && response.data && response.data.output) {
+                setFeedback(response.data.output.feedback);
+            } else {
+                console.error('Invalid response:', response);
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     return (
         <div>
@@ -28,12 +49,12 @@ function GraderPage() {
                 <div className='inputSection'>
                     <div className='promptSection'>
                         <h1>Prompt</h1>
-                        <textarea placeholder='Enter your prompt here'></textarea>
+                        <textarea placeholder='Enter your prompt here' value={promptText} onChange={e => setPromptText(e.target.value)}></textarea>
                     </div>
 
                     <div className='responseSection'>
                         <h1>Response</h1>
-                        <textarea placeholder='Enter your response here'></textarea>
+                        <textarea placeholder='Enter your response here' value={responseText} onChange={e => setResponseText(e.target.value)}></textarea>
                     </div>
 
                     <div>
@@ -46,8 +67,12 @@ function GraderPage() {
                             <p>AP World History</p>
 
                             <div className='graderButtons'>
-                                <button>LEQ</button>
-                                <button>SAQ</button>
+                            <button onClick={() => {
+                                setActiveEssayType('worldLEQ');
+                            }}>LEQ</button>  
+                            <button onClick={() => {
+                                setActiveEssayType('worldSAQ');
+                            }}>SAQ</button>
                             </div>
                         </div>
 
@@ -55,8 +80,12 @@ function GraderPage() {
                             <p>AP US History</p>
 
                             <div className='graderButtons'>
-                                <button>LEQ</button>
-                                <button>SAQ</button>
+                            <button onClick={() => {
+                                setActiveEssayType('apushLEQ');
+                            }}>LEQ</button>  
+                            <button onClick={() => {
+                                setActiveEssayType('apushSAQ');
+                            }}>SAQ</button>
                             </div>
                         </div>
 
@@ -64,8 +93,12 @@ function GraderPage() {
                             <p>AP Euro History</p>
 
                             <div className='graderButtons'>
-                                <button>LEQ</button>
-                                <button>SAQ</button>
+                            <button onClick={() => {
+                                setActiveEssayType('euroLEQ');
+                            }}>LEQ</button>  
+                            <button onClick={() => {
+                                setActiveEssayType('euroSAQ');
+                            }}>SAQ</button>
                             </div>
                         </div>
 
@@ -73,13 +106,17 @@ function GraderPage() {
                             <p>AP English Language</p>
 
                             <div className='graderButtons'>
-                                <button>Argument Essay</button>
+                            <button onClick={() => {
+                                setActiveEssayType('argument');
+                            }}>Argument Essay</button>  
                             </div>
+
                         </div> {/* end of langOption */}
                     </div> {/* end of graderOptions */}
 
                     <div className='submitSection'>
-                        <button className='submitButton'>Submit</button>
+                        <button className='submitButton' onClick={() => {getGraderOutput();}}
+                        >Submit</button>
                     </div>
                 </div> {/* end of inputSection */}
 
@@ -93,7 +130,7 @@ function GraderPage() {
                     <div className='feedbackSection'>
                         <h1>Feedback</h1>
                         <div className='feedbackTxt'>
-                            <p>Your feedback will appear here</p>
+                            {feedback === '' ? <p>Your feedback will appear here</p> : <p>{feedback}</p>}
                         </div>
                     </div>
                 </div>

@@ -28,9 +28,11 @@ function Generate() {
 
     // method to send prompt into openAI api in backend and print the response in the textSection
     const getAIOutput = async () => {
+
         const prompt = typeof prompts[activeEssayType] === 'function' 
             ? prompts[activeEssayType]() 
             : prompts[activeEssayType];
+            
         const instruction = typeof instructions[activeInstructions] === 'function' 
             ? instructions[activeInstructions]() 
             : instructions[activeInstructions];
