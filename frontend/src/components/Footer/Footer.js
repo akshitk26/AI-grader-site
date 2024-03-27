@@ -23,8 +23,8 @@ function Footer() {
                     </div>
 
                     <div>
-                        <p>Privacy policy link here</p>
-                        <p>Terms and conditions link here</p>
+                        <p>Privacy policy</p>
+                        <p>Terms and conditions</p>
                     </div>
 
                 </div>

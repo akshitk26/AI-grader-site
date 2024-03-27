@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './GraderPage.css';
+import axios from 'axios';
 
 function GraderPage() {
-
+    
+    //click effect
     useEffect(() => {
         const buttons = document.querySelectorAll('.graderButtons button');
         buttons.forEach(button => {

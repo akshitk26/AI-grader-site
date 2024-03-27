@@ -12,6 +12,8 @@ CORS(app)
 
 
 @app.route('/api/openai', methods=['POST', 'OPTIONS'])
+
+#generate prompt code
 def get_openai_output():
     if request.method == 'OPTIONS':
         return '', 200
@@ -38,6 +40,8 @@ def get_openai_output():
 
 
     return {'output': response.choices[0].message.content.strip()}
+
+
 
 
 if __name__ == '__main__':
