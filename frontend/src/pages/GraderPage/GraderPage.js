@@ -34,7 +34,7 @@ function GraderPage() {
         try {
             const response = await axios.post('http://localhost:5000/api/grader', { prompt: promptText, response: responseText, rubric: rubric });
             if (response && response.data && response.data.output) {
-                setFeedback(response.data.output.feedback);
+                setFeedback(response.data.output);
             } else {
                 console.error('Invalid response:', response);
             }
@@ -130,7 +130,7 @@ function GraderPage() {
                     <div className='feedbackSection'>
                         <h1>Feedback</h1>
                         <div className='feedbackTxt'>
-                            {feedback === '' ? <p>Your feedback will appear here</p> : <p>{feedback}</p>}
+                            {feedback === '' ? <p>Your feedback will appear here</p> : <pre>{feedback}</pre>}
                         </div>
                     </div>
                 </div>

@@ -38,6 +38,7 @@ def get_openai_output():
     return {'output': response.choices[0].message.content.strip()}
 
 #grader code
+@app.route('/api/grader', methods=['POST', 'OPTIONS'])
 def get_grader_output():
     if request.method == 'OPTIONS':
         return '', 200
@@ -66,7 +67,9 @@ def get_grader_output():
     Make sure you address EVERY SINGLE part of rubric and EVERY SINGLE section and Do not leave out sections of the rubric even if the respones did not earn any
     points in that category.
     ProvidE SPECIFIC feedback on what to improve, but more importantly, tell the user HOW To improve and even give suggestions in their text.
-    Do not just say that it can be better if they do this, say HOW it can be better SPECIFICALLY and suggest the user to make very specific, particular edits to make it better."""}
+    Do not just say that it can be better if they do this, say HOW it can be better SPECIFICALLY and suggest the user to make very specific, particular edits to make it better.
+                 When mentioning the score, you have to say 'score: (numerical score here)' at the very end
+                 of the entire feedback, every time, no matter what."""}
             ]
         )
 

@@ -78,3 +78,9 @@
     color: black;
     margin-bottom: 60px;
 }
+
+.feedbackTxt pre {
+    font-family: inherit; /* Use the same font as the rest of the page */
+    white-space: pre-wrap; /* Enable text wrapping */
+    word-wrap: break-word; /* Break words if necessary to prevent overflow */
+}
