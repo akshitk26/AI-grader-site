@@ -3,6 +3,11 @@ import './GraderPage.css';
 import axios from 'axios';
 
 function GraderPage() {
+
+    const [prompt, setPrompt] = useState('');
+    const [response, setResponse] = useState('');
+    const [feedback, setFeedback] = useState('Your feedback will appear here');
+    const [score, setScore] = useState(0);
     
     //click effect
     useEffect(() => {
@@ -14,6 +19,8 @@ function GraderPage() {
             });
         });
     }, []);
+
+    //API call method
 
     return (
         <div>
