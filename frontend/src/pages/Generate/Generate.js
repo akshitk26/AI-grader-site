@@ -142,7 +142,7 @@ function Generate() {
                 <div class="textSection">
                     {!isButtonSelected && <p>Please select an FRQ type first.</p>}
                     <div class="text-section">
-                        {aiOutput === '' ? <p>Your prompt will appear here</p> : <p>{aiOutput}</p>}
+                        {aiOutput === '' ? <p>Your prompt will appear here</p> : <pre>{aiOutput}</pre>}
                     </div>
                 </div>
             </div>

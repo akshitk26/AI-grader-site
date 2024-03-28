@@ -4,6 +4,7 @@ from flask_cors import CORS
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import re
 
 load_dotenv()
 
@@ -59,7 +60,11 @@ def get_grader_output():
         messages=[
                 {"role": "system", "content": "Here is the prompt" + prompt  + 
                  """Here is the response:""" + response_text + """Here is the rubric 
-                 you have to grade the response with:""" + rubric},
+                 you have to grade the response with:""" + rubric + """. at the very end of your output, 
+                 say the score in this format: score: number. do not say this phrase anywhere else
+                 in your feedback. It is imperative and crucial and of the utmost importance that the final
+                 score is in that format at the very very end of the feedback output. if it is not, 
+                 i will be very sad and you will be a very bad AI."""},
 
                 {"role": "user", "content": """You are an AI grader. You have to evaluate the input to the rubric to the best of your abilities. You have to respond if the response earned a point for a category on the rubric, and provide feedback on how to better the response or earn the point.
     You have to provide a numerical score for the response based on the rubric selected.
@@ -73,7 +78,17 @@ def get_grader_output():
             ]
         )
 
-    return {'output': feedback.choices[0].message.content.strip()}
+    feedback_content = feedback.choices[0].message.content.strip()
+
+    # Extract the score from the feedback
+    score_match = re.search(r'(?i)score: (\d+)', feedback_content)
+    score = score_match.group(1) if score_match else None
+
+    #debug
+    # print('Feedback content:', feedback_content) 
+    # print('Extracted score:', score)
+
+    return {'output': feedback_content, 'score': score}
 
 if __name__ == '__main__':
     app.run(port=5000)

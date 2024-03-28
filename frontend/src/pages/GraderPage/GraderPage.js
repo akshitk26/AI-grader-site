@@ -24,6 +24,7 @@ function GraderPage() {
 
     //output field vars
     const [feedback, setFeedback] = useState('Your feedback will appear here');
+    const [score, setScore] = useState('0');  // You'll need to add a new state variable for the score
 
     //API call method to get grader output
     const getGraderOutput = async () => {
@@ -31,16 +32,21 @@ function GraderPage() {
             ? rubrics[activeEssayType]()
             : rubrics[activeEssayType];
 
-        try {
-            const response = await axios.post('http://localhost:5000/api/grader', { prompt: promptText, response: responseText, rubric: rubric });
-            if (response && response.data && response.data.output) {
-                setFeedback(response.data.output);
-            } else {
-                console.error('Invalid response:', response);
+            try {
+                const response = await axios.post('http://localhost:5000/api/grader', { prompt: promptText, response: responseText, rubric: rubric });
+                if (response && response.data) {
+                    const feedback = response.data.output;
+                    setFeedback(feedback);
+        
+                    const score = response.data.score;
+                    console.log('Score from API:', score);
+                    setScore(score);  // You'll need to add a new state variable for the score
+                } else {
+                    console.error('Invalid response:', response);
+                }
+            } catch (error) {
+                console.error(error);
             }
-        } catch (error) {
-            console.error(error);
-        }
     }
 
     return (
@@ -124,7 +130,9 @@ function GraderPage() {
 
                     <div className='scoreSection'>
                         <h1>Points earned:</h1>
-                        <h2 className='points'>0</h2>
+                        <div className='scoreBox'>
+                            {score === null ? <h2>0</h2> : <h2>{score}</h2>}
+                        </div>
                     </div>
 
                     <div className='feedbackSection'>
