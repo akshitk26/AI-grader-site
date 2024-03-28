@@ -54,10 +54,11 @@ function Generate() {
 
     return (
         <div>
-            <div class="title">
+            <div class="generatortitle">
                 <h1>Prompt Generator</h1>
                 <p>Generate a prompt for AI to grade.</p>
             </div>
+
             <div class="body">
 
 

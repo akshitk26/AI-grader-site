@@ -9,8 +9,8 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-/* Style the title bar */
-.title {
+/* Style the generatortitle bar */
+.generatortitle {
     background-color: var(--papaya);
     
     text-align: center; /* Center the text horizontally */
@@ -18,14 +18,14 @@
     font-family: 'DM Sans', sans-serif;
   }
   
-  .title h1 {
+  .generatortitle h1 {
     margin: 0; /* Remove default margin for h1 */
     font-size: 80px; /* Set the font size */
     color: white; /* Set the text color */
     font-weight: 500;
   }
 
-  .title p {
+  .generatortitle p {
     margin: 0; /* Remove default margin for p */
     margin-top: 20px;
     font-size: 25px; /* Set the font size */

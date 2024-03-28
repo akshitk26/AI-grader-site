@@ -1,0 +1,29 @@
+@import '../../Theme.css';
+
+.title {
+    padding: 200px 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+}
+
+.left {
+    width: 100%;
+    font-size: 50px;
+    align-items: center;
+}
+
+.left h2 {
+    font-style: lighter;
+    margin-top: 5px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.homeBody {
+    padding: 100px;
+}
