@@ -1,7 +1,7 @@
 @import '../../Theme.css';
 
 .body {
-    background-color: white;
+    background-color: #ededed;
     padding: 100px 130px; /* Add padding to the top and bottom */
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ box-shadow:  21px 21px 34px #c7c7c7,
     margin-top: 20px;
   }
   
-  button {
+  .subjectButton {
     padding: 10px 20px;
     border: none;
     border-radius: 80px;
@@ -87,13 +87,13 @@ box-shadow:  21px 21px 34px #c7c7c7,
     transition: background-color 0.3s, transform 0.2s; /* Add transition for smooth color change and scaling */
   }
   
-  button:hover {
+  .subjectButton:hover {
     background-color: #d9d9d9; /* Change color on hover */
     transform: scale(1.1); /* Scale up on hover */
     color: white;
   }
   
-  button.active {
+  .subjectButton.active {
     background-color: #a6a6a6; /* Change color when active */
     transform: scale(1.1); /* Scale up when active */
     color: white;
@@ -107,7 +107,7 @@ box-shadow:  21px 21px 34px #c7c7c7,
     margin-top: 70px;
   }
 
-  .generateButton button {
+  .generateButton .subjectButton {
     font-size: 30px;
     border-radius: 15px;
     border: none;
@@ -143,6 +143,14 @@ box-shadow:  21px 21px 34px #c7c7c7,
 
   .generateBtn{
     transition: all 0.2s ease-in-out;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-family: 'DM Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
   }
 
   .generateBtn:hover {
@@ -155,7 +163,7 @@ box-shadow:  21px 21px 34px #c7c7c7,
   }
 
   .text-section {
-    margin-top: 0px; /* Add some space between the generate button and the text section */
+    margin-top: 0px; /* Add some space between the generate .subjectButton and the text section */
     padding: 10px 30px; /* Add padding for space inside the text section */
     border: 2px solid #d9d9d9; /* Add border to the text section */
     border-radius: 10px; /* Add rounded corners */

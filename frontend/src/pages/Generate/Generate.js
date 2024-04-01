@@ -73,12 +73,12 @@ function Generate() {
                         {/*ap world box*/}
                         <label for="apWorld">AP World History</label>
                         <div class="buttons">
-                        <   button onClick={() => {
+                        <   button className='subjectButton'onClick={() => {
                                 setActiveEssayType('worldLEQ');
                                 setActiveInstructions('worldLEQinst');
                                 setIsButtonSelected(true);
                             }}>LEQ</button>
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('worldSAQ');
                                 setActiveInstructions('worldSAQinst');
                                 setIsButtonSelected(true);
@@ -90,12 +90,12 @@ function Generate() {
                     <div class="apUSH">
                         <label for="apUSH">AP US History</label>
                         <div class="buttons">
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('apushLEQ');
                                 setActiveInstructions('apushLEQinst');
                                 setIsButtonSelected(true);
                             }}>LEQ</button>  
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('apushSAQ');
                                 setActiveInstructions('apushSAQinst');
                                 setIsButtonSelected(true);
@@ -106,12 +106,12 @@ function Generate() {
                     <div class="apEuro">
                         <label for="apEuro">AP EU History</label>
                         <div class="buttons">
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('euroLEQ');
                                 setActiveInstructions('euroLEQinst');
                                 setIsButtonSelected(true);
                             }}>LEQ</button>  
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('euroSAQ');
                                 setActiveInstructions('euroSAQinst');
                                 setIsButtonSelected(true);
@@ -123,7 +123,7 @@ function Generate() {
                     <div class="apLang">
                         <label for="apLang">AP English Lang</label>
                         <div class="buttons">
-                            <button onClick={() => {
+                            <button className='subjectButton' onClick={() => {
                                 setActiveEssayType('argument');
                                 setActiveInstructions('argumentInst');
                                 setIsButtonSelected(true);
