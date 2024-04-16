@@ -1,22 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
 function Home() {
+
+    const words = ['FASTER', 'EASIER', 'BETTER', 'SMARTER', 'EFFICIENT'];
+    const [index, setIndex] = useState(0);
+    const [outgoingIndex, setOutgoingIndex] = useState(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setOutgoingIndex(index);
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }, 2000); // Change every 2 seconds
+
+        return () => clearInterval(interval); // Clean up on unmount
+    }, [index]);
 
     return (
         <div>
             <div class="title">
 
                 <div className='top'>
-                    <h1>STUDY FASTER</h1>
+                    <h1>
+                        <div className="titleContainer">
+                            STUDY 
+                            {outgoingIndex !== null && <span key={outgoingIndex} className="animatedWordOut">{words[outgoingIndex]}</span>}
+                            <span key={index} className="animatedWordIn">{words[index]}</span>
+                        </div>
+                    </h1>
                     {/* <h1>STUDY FASTER /EASIER/BETTER/SMARTER/EFFICIENT</h1> */}
 
                     <h5>harnessing the power of AI</h5>
                 </div>
 
                 <div className='bottom'>
-                    something goes here
+                    Spend less time searching and more time improving
                 </div> 
             </div> {/* end of title */}
 
