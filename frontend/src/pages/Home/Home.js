@@ -22,16 +22,23 @@ function Home() {
             <div class="title">
 
                 <div className='top'>
-                    <h1>
-                        <div className="titleContainer">
-                            STUDY 
-                            {outgoingIndex !== null && <span key={outgoingIndex} className="animatedWordOut">{words[outgoingIndex]}</span>}
-                            <span key={index} className="animatedWordIn">{words[index]}</span>
-                        </div>
-                    </h1>
+                    <div className='studyText'>
+                        <h1>
+                            STUDY <br/> FASTER
+                        </h1>
+                    </div>
+
                     {/* <h1>STUDY FASTER /EASIER/BETTER/SMARTER/EFFICIENT</h1> */}
 
-                    <h5>harnessing the power of AI</h5>
+                    <div className='rightSideText'>
+                        <div>
+                            <h5>harnessing the power of AI</h5>
+                        </div>
+
+                        <div>
+                            image goes here
+                        </div>
+                    </div>
                 </div>
 
                 <div className='bottom'>
@@ -40,8 +47,6 @@ function Home() {
             </div> {/* end of title */}
 
             <div className='homeBody'>
-
-                
 
                 <div className='desc1'>
 
@@ -94,9 +99,73 @@ function Home() {
                     </div>
                 </div> {/* end of desc2 */} 
 
-                <div className='image2'>
-                    <p>image goes here</p>
-                </div> {/* end of image1 */}
+                <div className='desc3'>
+
+                    <div className='desc3title'>
+                        <p>How it works</p>
+                    </div>
+                    
+                    <div className='desc3body'>
+            
+                        <div className='step1'>
+                            <div className='stepTitle'>
+                                <p>STEP 1</p>
+                            </div>
+
+                            <div className='step1content'>
+                                Users are able to select various parameters that fit their needs for both the AI generator and 
+                                grader tools that are sent to the OpenAI API in the backend.
+                            </div>
+                        </div>
+                        
+                        {/* connector line */}
+                        <svg width="100%" height="400">
+                            {/* <!-- Line from Step 1 to Step 2 --> */}
+                            <path d="M 75 0 V 175 H 1085 V 350" stroke="white" fill="transparent"/>
+                            {/* <!-- Dot at the start of the line --> */}
+                            <circle cx="75" cy="5" r="5" fill="white"/>
+                            {/* <!-- Dot at the end of the line --> */}
+                            <circle cx="1085" cy="350" r="5" fill="white"/>
+                        </svg>
+
+                        <div className='step2'>
+                            <div className='step1content'>
+                                Using data analysis, user input interpretation, and prompt engineering, the AI is able to generate
+                                an output precisely based on the user parameters that were sent from the website.
+                            </div>
+
+                            <div className='stepTitle'>
+                                <p>STEP 2</p>
+                            </div>
+                        </div>
+
+                        {/* connector line */}
+                        <svg width="100%" height="400">
+                            {/* <!-- Line from Step 2 to Step 3 --> */}
+                            <path d="M 1085 0 V 175 H 75 V 350" stroke="white" fill="transparent"/>
+                            {/* <!-- Dot at the start of the line --> */}
+                            <circle cx="1085" cy="5" r="5" fill="white"/>
+                            {/* <!-- Dot at the end of the line --> */}
+                            <circle cx="75" cy="350" r="5" fill="white"/>
+                        </svg>
+
+                        <div className='step3'>
+                            <div className='stepTitle'>
+                                <p>STEP 3</p>
+                            </div>
+
+                            <div className='step1content'>
+                                After finishing the generation of the output, the AI system connects back with the site to display 
+                                its information to the user. The grader tool also features a separate points section, where a
+                                numerical score, extracted from the AI's generated output, is displayed separately from the qualitative feedback.
+                            </div>
+                        </div>
+                    </div> 
+                </div> {/* end of desc3 */}
+
+                <div className='banner1'>
+                    <p>GET STARTED TODAY</p>
+                </div>
 
             </div> {/* end of homeBody */}
         </div> 
