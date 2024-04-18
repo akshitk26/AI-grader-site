@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Home.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/Link';
 
 function Home() {
 
@@ -70,14 +70,14 @@ function Home() {
                             <p>Head over to the 'Prompt Generator' page and watch the video tutorial to get an FRQ prompt for one of the listed subjects.</p>
                         </div>
 
-                        <button class="button"> <Link to="/generate"> Generate a Prompt </Link> 
+                        <button class="button"> <Link href="/generate"> Generate a Prompt </Link> 
                         </button>
 
                         <div className='box2'>  
                             <p>Practice by writing your own response to the prompt</p>
                         </div>
 
-                        <button class="button"> <Link to="/Grade"> Grade my response </Link>
+                        <button class="button"> <Link href="/Grade"> Grade my response </Link>
                         </button>
 
                         <div className='box3'>  

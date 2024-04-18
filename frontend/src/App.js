@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -27,15 +27,9 @@ function App() {
   return (
     <div className="App">
         <Header /> {/* Header appears on all pages */}
-        <Routes>
-          <Route path="/Home" element={<Home />} /> {/* Default route */}
-          <Route path="/Generate" element={<Generate />} />
-          <Route path="/Grade" element={<Grade />} />
-          <Route path="/Signin" element={<SignIn />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/GraderPage" element={<GraderPage />} />
-          {/* Add more routes as needed */}
-        </Routes>
+
+        
+
         <Footer /> {/* Footer appears on all pages */}
     </div>
   );

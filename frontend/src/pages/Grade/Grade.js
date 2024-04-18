@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Grade.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/Link';
 
 function Grade() {
     return (
@@ -76,7 +76,7 @@ function Grade() {
                 </div>
 
                 <div>
-                    <Link to="../GraderPage">Go to the grader</Link>
+                    <Link href="../GraderPage">Go to the grader</Link>
                 </div>
             </div>
         </div>
