@@ -29,8 +29,6 @@ function App() {
         <Header /> {/* Header appears on all pages */}
         <Routes>
           <Route path="/Home" element={<Home />} /> {/* Default route */}
-          <Route path="/HowToUse" element={<HowToUse />} />
-          <Route path="/Donate" element={<Donate />} />
           <Route path="/Generate" element={<Generate />} />
           <Route path="/Grade" element={<Grade />} />
           <Route path="/Signin" element={<SignIn />} />

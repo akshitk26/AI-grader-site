@@ -1,10 +1,10 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/Donate/Donate": "pages/Donate/Donate.js",
   "/About/About": "pages/About/About.js",
-  "/Grade/Grade": "pages/Grade/Grade.js",
+  "/Donate/Donate": "pages/Donate/Donate.js",
   "/Generate/Generate": "pages/Generate/Generate.js",
+  "/Grade/Grade": "pages/Grade/Grade.js",
   "/GraderPage/GraderPage": "pages/GraderPage/GraderPage.js",
   "/Home/Home": "pages/Home/Home.js",
   "/HowToUse/HowToUse": "pages/HowToUse/HowToUse.js",
