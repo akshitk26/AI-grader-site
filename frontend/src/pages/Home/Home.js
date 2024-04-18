@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
 function Home() {
-
-    // const words = ['FASTER', 'EASIER', 'BETTER', 'SMARTER', 'EFFICIENT'];
-    // const [index, setIndex] = useState(0);
-    // const [outgoingIndex, setOutgoingIndex] = useState(null);
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setOutgoingIndex(index);
-    //         setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    //     }, 2000); // Change every 2 seconds
-
-    //     return () => clearInterval(interval); // Clean up on unmount
-    // }, [index]);
 
     return (
         <div>
