@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Home.css';
-import { Link } from 'next/Link';
+import { Link } from 'next/link';
 
 function Home() {
 

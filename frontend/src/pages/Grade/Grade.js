@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Grade.css';
-import { Link } from 'next/Link';
+import { Link } from 'next/link';
 
 function Grade() {
     return (
