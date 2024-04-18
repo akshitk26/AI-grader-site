@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/x3BO7ot6XzdAQ_yL0L_2b/_buildManifest.js",
-    "static/x3BO7ot6XzdAQ_yL0L_2b/_ssgManifest.js"
+    "static/kNO3mHELwTdxitJDoIxWl/_buildManifest.js",
+    "static/kNO3mHELwTdxitJDoIxWl/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -27,7 +27,7 @@
       "static/chunks/framework-2c16ac744b6cdea6.js",
       "static/chunks/main-3f4b50d11d6df7af.js",
       "static/chunks/121-df790d39e3eaae8a.js",
-      "static/chunks/pages/Generate/Generate-c4944a8522e49ee0.js"
+      "static/chunks/pages/Generate/Generate-dcf7d39b9ca62d1a.js"
     ],
     "/Grade/Grade": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
@@ -35,14 +35,14 @@
       "static/chunks/main-3f4b50d11d6df7af.js",
       "static/chunks/3b1baa31-644d56fb4ed79a4b.js",
       "static/chunks/660-7e9c78e725d96dca.js",
-      "static/chunks/pages/Grade/Grade-3e4704eb763c2973.js"
+      "static/chunks/pages/Grade/Grade-8cb890c34edae29d.js"
     ],
     "/GraderPage/GraderPage": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
       "static/chunks/framework-2c16ac744b6cdea6.js",
       "static/chunks/main-3f4b50d11d6df7af.js",
       "static/chunks/121-df790d39e3eaae8a.js",
-      "static/chunks/pages/GraderPage/GraderPage-a3629b218d657f0e.js"
+      "static/chunks/pages/GraderPage/GraderPage-b58a2d2e5534fc2f.js"
     ],
     "/Home/Home": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
@@ -50,7 +50,7 @@
       "static/chunks/main-3f4b50d11d6df7af.js",
       "static/chunks/3b1baa31-644d56fb4ed79a4b.js",
       "static/chunks/660-7e9c78e725d96dca.js",
-      "static/chunks/pages/Home/Home-f2f65a52da457855.js"
+      "static/chunks/pages/Home/Home-72e33cb5c6d2446b.js"
     ],
     "/HowToUse/HowToUse": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
@@ -68,7 +68,8 @@
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
       "static/chunks/framework-2c16ac744b6cdea6.js",
       "static/chunks/main-3f4b50d11d6df7af.js",
-      "static/chunks/pages/_app-753213cf38d40131.js"
+      "static/css/4396f162fd221eea.css",
+      "static/chunks/pages/_app-5fe986a2c26cbde4.js"
     ],
     "/_error": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",

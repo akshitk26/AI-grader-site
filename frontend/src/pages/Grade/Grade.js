@@ -1,5 +1,5 @@
 import React from 'react';
-import './Grade.css';
+// import './Grade.css';
 import { Link } from 'react-router-dom';
 
 function Grade() {
