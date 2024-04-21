@@ -81,7 +81,6 @@ box-shadow:  21px 21px 34px #c7c7c7,
     border: none;
     border-radius: 80px;
     background-color: #f2f2f2;
-    border: 1px solid var(--papaya);
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 15px;
@@ -89,14 +88,13 @@ box-shadow:  21px 21px 34px #c7c7c7,
   }
   
   .subjectButton:hover {
-    background-color: var(--lightPapaya); /* Change color on hover */
-    border: 1px solid var(--lightPapaya);
+    background-color: #d9d9d9; /* Change color on hover */
     transform: scale(1.1); /* Scale up on hover */
     color: white;
   }
-
+  
   .subjectButton.active {
-    background-color: var(--papaya); /* Change color when active */
+    background-color: #a6a6a6; /* Change color when active */
     transform: scale(1.1); /* Scale up when active */
     color: white;
   }
