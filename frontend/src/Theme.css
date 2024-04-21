@@ -4,17 +4,26 @@
     --papaya: #E24E42;
     --papaya-rgb: 226, 78, 66;
 
+
+    --lightPapaya: #E28F89;
+    --lightPapaya-rgb: 226, 143, 137;
+
+
     --mustard: #E9B000;
     --mustard-rgb: 233, 176, 0;
+
 
     --blush: #EB6E80;
     --blush-rgb: 235, 110, 128;
 
+
     --aqua: #008F95;
     --aqua-rgb: 0, 143, 149;
 
+
     --pink: #FF0049FF;
     --pink-rgb: 255, 0, 73;
+
 
     --body-font: 'Arial', sans-serif;
     --heading-font: 'Roboto', sans-serif;

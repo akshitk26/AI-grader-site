@@ -1,7 +1,7 @@
 // frontend\src\pages\Generate\Generate.js
 // This is the page where users can generate a prompt for AI to grade.
-// import './Generate.css';
-// import '../../Theme.css';
+import './Generate.css';
+import '../../Theme.css';
 
 import prompts from '../../assets/prompts';
 import instructions from '../../assets/instructions';

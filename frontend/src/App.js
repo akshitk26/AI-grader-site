@@ -1,4 +1,4 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -12,26 +12,22 @@ import SignIn from './pages/SignIn/SignIn';
 import About from './pages/About/About';
 import GraderPage from './pages/GraderPage/GraderPage';
 
-import '../src/components/Footer/Footer.css';
-import '../src/components/Header/Header.css';
-
-import '../src/Theme.css';
-import '../src/pages/Home/Home.css';
-import '../src/pages/Generate/Generate.css';
-import '../src/pages/Grade/Grade.css';
-import '../src/pages/SignIn/SignIn.css';
-import '../src/pages/About/About.css';
-import '../src/pages/GraderPage/GraderPage.css';
-
 function App() {
   return (
-    <div className="App">
+      <div className="App">
         <Header /> {/* Header appears on all pages */}
-
         
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/generate" element={<Generate />} />
+          <Route path="/grade" element={<Grade />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/grader-page" element={<GraderPage />} />
+        </Routes>
 
         <Footer /> {/* Footer appears on all pages */}
-    </div>
+      </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import './GraderPage.css';
+import './GraderPage.css';
 import axios from 'axios';
 
 import rubrics from '../../assets/rubrics';

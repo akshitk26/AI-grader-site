@@ -1,5 +1,6 @@
 @import '../../Theme.css';
 
+
 .body {
     background-color: #ededed;
     padding: 100px 130px; /* Add padding to the top and bottom */
@@ -9,21 +10,23 @@
     font-family: 'DM Sans', sans-serif;
 }
 
+
 /* Style the generatortitle bar */
 .generatortitle {
     background-color: var(--papaya);
-    
+   
     text-align: center; /* Center the text horizontally */
     padding: 120px 0; /* Add padding to the top and bottom */
     font-family: 'DM Sans', sans-serif;
   }
-  
+ 
   .generatortitle h1 {
     margin: 0; /* Remove default margin for h1 */
     font-size: 80px; /* Set the font size */
     color: white; /* Set the text color */
     font-weight: 500;
   }
+
 
   .generatortitle p {
     margin: 0; /* Remove default margin for p */
@@ -33,20 +36,21 @@
     font-weight: 200;
   }
 
+
   /* Style the description label */
 .description {
     text-align: center;
     margin-bottom: 50px;
     font-size: 30px;;
   }
-  
+ 
   /* Style the options container */
   .options {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
-  
+ 
   /* Style the option labels and buttons */
 /* Add border to the outer container and remove border from inner elements */
 .options div {
@@ -64,48 +68,55 @@ box-shadow:  21px 21px 34px #c7c7c7,
   width: 200px; /* Set fixed width for all subject sections */
 }
 
+
 /* Remove border from inner elements */
 .options div label,
 .options div .buttons {
   border: none;
   box-shadow:none;
 }
-  
+ 
   label {
     display: block;
     margin-top: 20px;
   }
-  
+ 
   .subjectButton {
     padding: 10px 20px;
     border: none;
     border-radius: 80px;
     background-color: #f2f2f2;
+    border: 1px solid var(--papaya);
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 15px;
     transition: background-color 0.3s, transform 0.2s; /* Add transition for smooth color change and scaling */
   }
-  
+ 
   .subjectButton:hover {
-    background-color: #d9d9d9; /* Change color on hover */
+    background-color: var(--lightPapaya); /* Change color on hover */
+    border: 1px solid var(--lightPapaya);
     transform: scale(1.1); /* Scale up on hover */
     color: white;
   }
-  
+
+
   .subjectButton.active {
-    background-color: #a6a6a6; /* Change color when active */
+    background-color: var(--papaya); /* Change color when active */
     transform: scale(1.1); /* Scale up when active */
     color: white;
   }
+
 
   .options div label{
     font-size: 22px;
   }
 
+
   .generateButton {
     margin-top: 70px;
   }
+
 
   .generateButton .subjectButton {
     font-size: 30px;
@@ -121,6 +132,8 @@ box-shadow:  21px 21px 34px #c7c7c7,
     margin-top: 50px;
 
 
+
+
     /* background: transparent;
     cursor: pointer;
     transition: ease-out 0.3s;
@@ -128,6 +141,7 @@ box-shadow:  21px 21px 34px #c7c7c7,
     border-radius: 10px;
     box-shadow: inset 0 0 0 0 var(--papaya); */
   }
+
 
   .generateBtn{
     height: 60px;
@@ -141,6 +155,7 @@ box-shadow:  21px 21px 34px #c7c7c7,
     color: white;
   }
 
+
   .generateBtn{
     transition: all 0.2s ease-in-out;
     padding: 20px;
@@ -153,14 +168,16 @@ box-shadow:  21px 21px 34px #c7c7c7,
     padding-bottom: 50px;
   }
 
+
   .generateBtn:hover {
     transform: translateY(3px);
     box-shadow: none;
   }
-  
+ 
   .generateBtn:active {
     opacity: 0.5;
   }
+
 
   .text-section {
     margin-top: 0px; /* Add some space between the generate .subjectButton and the text section */
@@ -174,13 +191,16 @@ box-shadow:  21px 21px 34px #c7c7c7,
     margin-bottom: 60px;
   }
 
+
 .textSection p {
   color: red;
 }
 
+
 .text-section p {
   color: black;
 }
+
 
 pre {
   font-family: inherit; /* Use the same font as the rest of the page */

@@ -1,26 +1,71 @@
 .graderTitle {
-    background-color: var(--mustard);
-    
-    text-align: center; /* Center the text horizontally */
-    padding: 120px 0; /* Add padding to the top and bottom */
-    font-family: 'DM Sans', sans-serif;
-  }
-  
-  .graderTitle h1 {
-    margin: 0; /* Remove default margin for h1 */
-    font-size: 80px; /* Set the font size */
-    color: white; /* Set the text color */
-    font-weight: 500;
-  }
+  background-color: var(--mustard);
+ 
+  text-align: center; /* Center the text horizontally */
+  padding: 120px 0; /* Add padding to the top and bottom */
+  font-family: 'DM Sans', sans-serif;
+}
 
-  .graderTitle p {
-    margin: 0; /* Remove default margin for p */
-    margin-top: 20px;
-    font-size: 25px; /* Set the font size */
-    color: white; /* Set the text color */
-    font-weight: 200;
-  }
-  
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.graderTitle h1 {
+  margin: 0; /* Remove default margin for h1 */
+  font-size: 80px; /* Set the font size */
+  color: white; /* Set the text color */
+  font-weight: 500;
+}
+
+
+.graderTitle p {
+  margin: 0; /* Remove default margin for p */
+  margin-top: 20px;
+  font-size: 25px; /* Set the font size */
+  color: white; /* Set the text color */
+  font-weight: 200;
+}
+
 .graderBody {
-    padding: 100px 130px;
+  padding: 100px 150px;
+}
+
+
+.grade1, .grade2, .grade3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.stepBody {
+width: 400px;
+}
+
+
+.gradeStepContent {
+width: 600px;
+}
+
+
+#grade2body {
+width: 100%;
+}
+
+
+.grade2 {
+margin-top: 50px;
+}
+
+
+.gradeStepTitle {
+font-size: 40px;
+font-weight: 600;
+}
+
+
+.stepBody {
+font-size: 25px;
 }
