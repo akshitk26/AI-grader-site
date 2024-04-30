@@ -23,7 +23,7 @@ function App() {
           <Route path="/grade" element={<Grade />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/about" element={<About />} />
-          <Route path="/grader-page" element={<GraderPage />} />
+          <Route path="/GraderPage" element={<GraderPage />} />
         </Routes>
 
         <Footer /> {/* Footer appears on all pages */}

@@ -91,7 +91,7 @@ function Grade() {
 
 
                 <div>
-                    <Link href="../GraderPage">Go to the grader</Link>
+                    <Link href="/GraderPage/GraderPage.js">Go to the grader</Link>
                 </div>
             </div>
         </div>
